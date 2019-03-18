@@ -22,7 +22,6 @@
             <h5><a href="#">{{Auth::user()->name}}</a></h5>
             <p class="text-muted">管理员</p>
         </div>
-
         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <ul class="metismenu" id="side-menu">
