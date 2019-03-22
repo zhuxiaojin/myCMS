@@ -4,8 +4,73 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7de8d2b9a1e988a98e23c7858717c67c",
+    "content-hash": "c6614d97add9a02b087d5990e4cadddf",
     "packages": [
+        {
+            "name": "appstract/laravel-options",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appstract/laravel-options.git",
+                "reference": "22e034c1ad1d7b03000e554bb09813954d2ab188"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appstract/laravel-options/zipball/22e034c1ad1d7b03000e554bb09813954d2ab188",
+                "reference": "22e034c1ad1d7b03000e554bb09813954d2ab188",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Appstract\\Options\\OptionsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Option": "Appstract\\Options\\OptionFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Appstract\\Options\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gijs Jorissen",
+                    "email": "hello@appstract.team",
+                    "homepage": "https://appstract.team",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Global options loaded from the database",
+            "homepage": "https://github.com/appstract/laravel-options",
+            "keywords": [
+                "appstract",
+                "laravel-options"
+            ],
+            "time": "2019-02-15T22:24:19+00:00"
+        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v3.2.3",

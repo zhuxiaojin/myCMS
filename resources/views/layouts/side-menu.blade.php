@@ -41,13 +41,16 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript: void(0);"><i class="fi-bar-graph"></i><span> 统计 </span> </a>
+                    <a href="javascript: void(0);"><i class="fi-bar-graph"></i><span> 统计 </span> <span
+                                class="menu-arrow"></span></a>
+
                 </li>
                 <li>
                     <a href="javascript: void(0);"><i class="fi-briefcase"></i> <span> 内容管理 </span> <span
                                 class="menu-arrow"></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{{route('article.index',Auth::user())}}">文章管理</a></li>
+                        <li><a href="{{route('menu.index',Auth::user())}}">文章管理</a></li>
                     </ul>
                 </li>
 
@@ -56,6 +59,7 @@
                                 class="menu-arrow"></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{{route('user.edit',Auth::user())}}">个人设置</a></li>
+                        <li><a href="{{route('option.index')}}">配置管理</a></li>
                         <li><a href=" #">跟踪设置</a></li>
                     </ul>
                 </li>

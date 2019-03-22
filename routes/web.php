@@ -11,10 +11,6 @@
 |
 */
 
-//Auth::routes();
-Route::get('/', function () {
-    return view('home');
-});
 /**
  *   后台路由
  */
@@ -54,5 +50,10 @@ Route::resource('/article', "Admin\ArticleController");
  *
  */
 
+/**
+ * 网站设置
+ */
+Route::resource('/option', 'Admin\OptionController');
+Route::resource('/site', 'Admin\SiteController');
 Route::get('/home', 'HomeController@index')->name('home');
 
