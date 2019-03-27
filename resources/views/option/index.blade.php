@@ -14,10 +14,11 @@
 
             <div class="row">
                 <div class="form-inline mb-3 mr-5">
-                    <form action="{{route('user.index')}}" method="get">
+                    <form action="{{route('option.index')}}" method="get">
                         @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" name="keywords" placeholder="用户名/邮箱/联系方式" value="{{$keywords}}">
+                            <input type="text" class="form-control" name="keywords" placeholder="名称/KEY"
+                                   value="{{$keywords}}">
                             <button class="btn btn-primary ml-2 " type="submit">查询</button>
                         </div>
                     </form>
@@ -42,9 +43,13 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @if(count($options)==0)
+                            <tr>
+                                <td colspan="4" class="text-center text-dark">暂无数据</td>
+                            </tr>
+                        @endif
                         @foreach($options as $option)
                             <tr>
-
                                 <td>
                                     <h5 class="m-0 font-weight-normal">{{$option->name}}
                                     </h5>
@@ -55,10 +60,10 @@
                                 <td>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-sm- mr-1"><a href="{{route('role.edit',$role->id)}}"
+                                            <div class="col-sm- mr-1"><a href="{{route('option.edit',$option->id)}}"
                                                                          class="btn btn-sm btn-custom">编辑</a></div>
                                             <div class="col-sm-  mr-1">
-                                                <button type="button" onclick="deleteObj({{$role->id}})"
+                                                <button type="button" onclick="deleteObj({{$option->id}})"
                                                         class="btn btn-sm btn-danger">删除
                                                 </button>
                                             </div>
@@ -86,8 +91,7 @@
     <script>
         function deleteObj(id) {
             swal({
-                title: '确定删除该角色吗？',
-                text: '删除后角色下所有用户会与该角色断开绑定',
+                title: '确定删除该配置吗？',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonClass: 'btn btn-confirm mt-2',
@@ -96,7 +100,7 @@
                 cancelButtonText: '取消'
             }).then(function () {
                 $.ajax({
-                    url: "{{url('role')}}/" + id,
+                    url: "{{url('option')}}/" + id,
                     type: 'DELETE',
                     data: {'_token': "{{csrf_token()}}"},
                     success: function (result) {

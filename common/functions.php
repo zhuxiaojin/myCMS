@@ -22,3 +22,11 @@ function getFileUrl($path) {
     }
     return Storage::url($path);
 }
+
+
+function success($data = [], $msg = 'success') {
+    return response(['status' => 1, 'data' => $data, 'msg' => $msg]);
+}
+function error($data = [], $msg = 'success') {
+    return response(['status' => 1, 'data' => $data, 'msg' => $msg]);
+}

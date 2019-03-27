@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Highdmin - Responsive Bootstrap 4 Admin Dashboard</title>
+    <title>MyCms - 越努力，越幸运</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
     <meta content="Coderthemes" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{asset('assets/images/mycms.ico')}}">
     <!-- Toastr css  alert 全局提示样式-->
     <link href="{{asset('plugins/jquery-toastr/jquery.toast.min.css')}}" rel="stylesheet" />
     <!-- App css -->
